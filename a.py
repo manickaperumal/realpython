@@ -1,9 +1,16 @@
-name="manickam"
-for i in len(name):
-    print(i)
 
+
+
+for i in "perumal":
+    print (i)
+
+
+p
+e
+r
+u
 m
 a
-n
-i
-c
+l
+
+
