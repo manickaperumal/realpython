@@ -1,7 +1,7 @@
 
 
 
-for i in "perumal":
+for i in "peruma":
     print (i)
 
 
@@ -11,6 +11,6 @@ r
 u
 m
 a
-l
+
 
 
