@@ -6,14 +6,12 @@ class test:
     def fun(self):
         print(self.__dict__)
 
+    def __str__(self):
+      return self
+
 a=test("manic",21)
 b=test("aswin",21)
-
-a.fun()
-b.fun()
+print(a)
 
 
-# output:
 
-# {'name': 'manic', 'age': 21}
-# {'name': 'aswin', 'age': 21}
