@@ -1,64 +1,25 @@
-import json
-class student:
-    def __init__(self,name,age,medium):
-        self.name=name
-        self.age=age
-        self.medium=medium
-
- 
-
-    def a(self):
-       store=self.__dict__
-       json1=json.dumps(store)
-       
-       print(type(json1))
-       return json1
-
-    def b (self):
-        print(self.age)
-
-    def c(self):
-          store=stud1.__dict__
-          
-          json1=json.dumps(store,sort_keys=True)
-          return json1
-    
-
-
-stud1=student("manic",21,"tamil")
-print(stud1.a())
-stud1.b()
-json1=stud1.c()
-print(json1)
-print(json1)
-
-
+import csv
+with open("/home/manikam/first.csv","w")as file:
+    v=csv.writer(file)
+   
+    v.writerow(['name',"mblno","email"])
+    members=int(input("given a no for your purpose:"))
+    for i in range(members):
+        name=input("enter your name:")
+        mblno=int(input("enter your mobile no:"))
+        email_id=input("enter your email id:")
+        v.writerow([name,mblno,email_id])
+        print(type(v))
 
 output:
 
-anikam@manikam:~$ cd pyy
-manikam@manikam:~/pyy$ python3 a.py
-<class 'str'>
-{"name": "manic", "age": 21, "medium": "tamil"}
-21
-{"age": 21, "medium": "tamil", "name": "manic"}
-{"age": 21, "medium": "tamil", "name": "manic"}
-
-
-
-
-        
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
+manikam@manikam:~$ /bin/python3 /home/manikam/pyy/3-2-22.py
+given a no for your purpose:2
+enter your name:manic
+enter your mobile no:91590
+enter your email id:manic@.com
+<class '_csv.writer'>
+enter your name:perumal
+enter your mobile no:56955
+enter your email id:perumal@.com
+<class '_csv.writer'>
