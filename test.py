@@ -9,28 +9,19 @@ class student:
         self.name = name
         self.age = age
         self.medium = medium
-        with open("/home/manikam/data.json","a")as js:
-          js.write(self.__dict__)
+        with open("/home/manikam/111.json","a")as js:
+         py=self.__dict__
+         x= json.dumps(py)
+         js.write(x)
 
     def a(self):
-        store = self.__dict__
-        json1 = json.dumps(store)
-        print(type(json1))
-        return json1
+        with open("/home/manikam/111.json","r")as just:
+            store=just.read()
+            return store
 
-    def b(self):
-        print(self.age)
-
-    def c(self):
-        store = stud1.__dict__
-        json1 = json.dumps(store, sort_keys=True)
-        return json1
-with open("/home/manikam/data.json","w"):
+obj=student("manic",21,"tamil")
+obj1=student("aswin",22,"tamil")
+obj2=student("perumal",22,"english")
 
 
-    stud1 = student("manic", 21, "tamil")
-    print(stud1.a())
-    stud1.b()
-    json1 = stud1.c()
-    print(json1)
-    print(json1)
+
