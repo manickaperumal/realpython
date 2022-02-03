@@ -1,25 +1,26 @@
 import csv
-with open("/home/manikam/first.csv","w")as file:
-    v=csv.writer(file)
-   
-    v.writerow(['name',"mblno","email"])
-    members=int(input("given a no for your purpose:"))
-    for i in range(members):
-        name=input("enter your name:")
-        mblno=int(input("enter your mobile no:"))
-        email_id=input("enter your email id:")
-        v.writerow([name,mblno,email_id])
-        print(type(v))
+with open("/home/manikam/111.txt","r")as textfile:
+    with open("/home/manikam/bigproject.csv","w",newline="")as csfile:
+        writer=csv.writer(csfile)
+        writer.writerow(["sno","goods","price"])
+
+        no=int(input("how many lines of content do you want:"))
+        for i in range(no):
+            content=textfile.readline()
+            
+
+            content=content.split()
+            writer.writerow(content)
+
 
 output:
-
 manikam@manikam:~$ /bin/python3 /home/manikam/pyy/3-2-22.py
-given a no for your purpose:2
-enter your name:manic
-enter your mobile no:91590
-enter your email id:manic@.com
-<class '_csv.writer'>
-enter your name:perumal
-enter your mobile no:56955
-enter your email id:perumal@.com
-<class '_csv.writer'>
+how many lines of content do you want:3
+
+
+sno	goods	price
+1	sugar	600
+2	curd	500
+3	comb	5
+
+
