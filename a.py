@@ -1,26 +1,39 @@
-import csv
-with open("/home/manikam/first.csv","w")as file:
-    v=csv.writer(file)
-   
-    v.writerow(['name',"mblno","email"])
-    members=int(input("given a no for your purpose:"))
-    for i in range(members):
-        name=input("enter your name:")
-        mblno=int(input("enter your mobile no:"))
-        email_id=input("enter your email id:")
-        v.writerow([name,mblno,email_id])
-        print(type(v))
+import json
+class student:
+    def __init__(self,name,age,medium):
+        self.name=name
+        self.age=age
+        self.medium=medium
 
 
-import csv
-with open ("/home/manikam/111.txt","r")as file1:
-  with open("/home/manikam/supermarket.csv","w",newline="\n")as file2:
 
-      store=file1.read()
-      store=store.split()
-      pen=csv.writer(file2)
-      pen.writerow(["no","goods","price"])
-      pen.writerow(store)
+    def a(self):
+       store=self.__dict__
+       json1=json.dumps(store)
+       
+       print(type(json1))
+       return json1
+
+    def b (self):
+        print(self.age)
+
+
+stud1=student("manic",21,"tamil")
+print(stud1.a())
+stud1.b()
+
+output:
+
+manikam@manikam:~$ /bin/python3 /home/manikam/pyy/a.py
+<class 'str'>
+{"name": "manic", "age": 21, "medium": "tamil"}
+21
+manikam@manikam:~$ 
+
+
+        
+     
+
 
 
 
