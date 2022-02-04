@@ -32,21 +32,35 @@ class student:
            
             age.append(dict["age"])
             age.sort(reverse=True)
+            
         for j in age:    
           print(j,end=" ")
 
+        
+    def agelimit(self):
+         nameslist=[]                                #to store a names in nameslist
+         for i in global_list:
+            # print (i)
+                dict=i
+                nameslist.append(dict["age"])
+                for j in nameslist:
+                    if j>=15 and j<=20:
+                        print(dict["name"])
+                
 
+        
 
     
                 
 stud1=student("manic",21,"Bsc","tuty")
 stud2=student("perumal",22,"Bcom","trichy")
 stud3=student("hari",24,"Msc","kovilpatti")
+stud4=student("aathavan",17,"12th","coiambatore")
 with open("/home/manikam/data.json","r")as js:   
     global_list=[]
     global_list=json.load(js)   
-    # print(global_list)                    #create a global to be used by any function     
+                                                #create a global to be used by any function     
+# stud1.namesorder()
+# stud1.ageorder()
 
-stud1.namesorder()
-stud1.ageorder()
-
+stud1.agelimit()
