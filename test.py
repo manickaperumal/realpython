@@ -48,7 +48,17 @@ class student:
                         print(dict["name"])
                 
 
-        
+    def namecheck (self):
+        nameslist=[]
+        for i in global_list:
+            dict=i
+            nameslist.append(dict["name"])
+        print(nameslist)
+        for j in nameslist:
+            # print(j)
+            if j[0]=='a' and j[-1]=='n':
+                print(j)
+
 
     
                 
@@ -56,6 +66,7 @@ stud1=student("manic",21,"Bsc","tuty")
 stud2=student("perumal",22,"Bcom","trichy")
 stud3=student("hari",24,"Msc","kovilpatti")
 stud4=student("aathavan",17,"12th","coiambatore")
+stud5=student("amaran",17,"12th","chennai")
 with open("/home/manikam/data.json","r")as js:   
     global_list=[]
     global_list=json.load(js)   
@@ -63,4 +74,5 @@ with open("/home/manikam/data.json","r")as js:
 # stud1.namesorder()
 # stud1.ageorder()
 
-stud1.agelimit()
+# stud1.agelimit()
+stud1.namecheck()
