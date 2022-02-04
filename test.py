@@ -9,19 +9,21 @@ class student:
         self.name = name
         self.age = age
         self.medium = medium
-        with open("/home/manikam/111.json","a")as js:
-         py=self.__dict__
-         x= json.dumps(py)
-         js.write(x)
+        with open("/home/manikam/111.json","w")as js:
+            j1=json.dumps(self.__dict__)
+            js.write(j1)
+    @staticmethod
+    def dict():
+      with open("/home/manikam/111.json","r")as f:
+            dict=json.load(f)
+            print(type(dict))
+            print(dict)
+            print(dict["name"])
+   
 
-    def a(self):
-        with open("/home/manikam/111.json","r")as just:
-            store=just.read()
-            return store
+
 
 obj=student("manic",21,"tamil")
-obj1=student("aswin",22,"tamil")
-obj2=student("perumal",22,"english")
-
+obj.dict()
 
 
