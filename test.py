@@ -1,29 +1,20 @@
 import json
-
-
+l=[]
 class student:
-    
-
-    def __init__(self, name, age, medium):
-        
-        self.name = name
-        self.age = age
-        self.medium = medium
-        with open("/home/manikam/111.json","w")as js:
-            j1=json.dumps(self.__dict__)
-            js.write(j1)
-    @staticmethod
-    def dict():
-      with open("/home/manikam/111.json","r")as f:
-            dict=json.load(f)
-            print(type(dict))
-            print(dict)
-            print(dict["name"])
-   
+    def __init__(self,name,age,degree,district):
+        self.name=name
+        self.age=age
+        self.degree=degree
+        self.district=district
+        with open("/home/manikam/888.json","w")as js:
+           global l
+           dic=self.__dict__
+           l.append(dic)
+           json.dump(l,js)
 
 
 
-obj=student("manic",21,"tamil")
-obj.dict()
-
-
+            
+stud1=student("manic",21,"Bsc","tuty")
+stud2=student("perumal",22,"Bcom","trichy")
+stud3=student("hari",24,"Msc","kovilpatti")
